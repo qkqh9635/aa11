@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>JS Calculator</title>
+		<style>
+	        input {
+		        padding: 8px;
+		        display: inline;
+		        margin-top: 4px;
+		        font-size: 20px;
+		        background-color: #ffffff;
+	        }
+	        input#display {
+	        	color: black;
+				background-color: #99ffcc;
+				font-size: 20px;
+				text-align: right;
+	        }
+	        input.num {
+	        	background-color: #ffff66;
+	        	font-weight: bold;
+	        }
+	        input.op {
+	        	background-color: #ff9900;
+	        	font-weight: bold;
+	        }
+	        input#clear {
+	        	background-color: #00ffff;
+	        }
+	        input#enter {
+	        	background-color: #00ffff;
+	        }
+	    </style>
+		<script>
+			var expression = "";
+
+			function add(character) {
+				expression = expression + character;
+				document.getElementById("display").value = expression;
+			}
+			
+			function del() {
+				expression=expression.substring(0,expression.length-1);
+				document.getElementById("display").value = expression;
+			}
+
+			function compute() {
+				var expression_num = parseFloat(eval(expression));
+				if(isInteger(expression_num)==true){
+					expression=expression_num;
+				}
+				else {
+					expression=expression_num.toFixed(2);	
+				}
+								
+				document.getElementById("display").value = expression;
+				
+			}
+
+			function clearDisplay() {
+				expression = "";
+				document.getElementById("display").value = "0";
+			}
+			
+			// isInteger() & isFloat()
+			function isInteger(x) { return Math.floor(x) === x; }
+			function isFloat(x) { return !!(x % 1); }
+		</script>
+
+	</head>
+	<body>
+		<div align="center">
+			<h2>JS Calculator</h2>
+		<form>
+			<input id="display" value="0" size="17">
+			<input type="button" value="  &larr;  " onclick="del()">
+			<br>
+			<input class="num" type="button" value="   7   " onclick="add('7')">
+			<input class="num" type="button" value="   8   " onclick="add('8')">
+			<input class="num" type="button" value="   9   " onclick="add('9')">
+			<input class="op" type="button" value="   /   " onclick="add('/')">
+			<br>
+			<input class="num" type="button" value="   4   " onclick="add('4')">
+			<input class="num" type="button" value="   5   " onclick="add('5')">
+			<input class="num" type="button" value="   6   " onclick="add('6')">
+			<input class="op" type="button" value="   *   " onclick="add('*')">
+			<br>
+			<input class="num" type="button" value="   1   " onclick="add('1')">
+			<input class="num" type="button" value="   2   " onclick="add('2')">
+			<input class="num" type="button" value="   3   " onclick="add('3')">
+			<input class="op" type="button" value="   -   " onclick="add('-')">
+			<br>
+			<input class="num" type="button" value="          0        " onclick="add('0')">
+			<input class="num" type="button" value="   .    " onclick="add('.')">
+			<input class="op" type="button" value="   +  " onclick="add('+')">
+			<br>
+			<input type="button" id="clear" value="       Clear     " onclick="clearDisplay()">
+			<input type="button" id="enter" value="       Enter      " name="enter" onclick="compute()">
+		</form>
+		<h4>COMSI, HM00</h4>
+		</div>
+	</body>
+</html>
+
+</html>

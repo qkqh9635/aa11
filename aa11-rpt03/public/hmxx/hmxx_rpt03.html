@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!-- 이 부분은 주석문입니다. 웹 브라우저는 주석을 화면에 출력하지 않습니다. -->
+<html>
+	<head>
+		<!-- 문서제목, 자바스크립트 코드, CSS 스타일 정의, 메타데이터정의 -->
+		<meta charset="utf-8">
+		<title>hmnn : My Homepage using Semantic tag</title>
+		<style>
+			html, body {
+				margin: 0;
+				padding: 0;
+				height: 100%;
+			}
+			.header {
+				width: 100%;
+				height: 10%;
+				background: yellow;
+			}
+			.nav {
+				width: 30%;
+				height: 80%;
+				float: left;
+				background: orange;
+			}
+			.section {
+				width: 70%;
+				height: 80%;
+				float: left;
+				background: olivedrab;
+			}
+			.aside {
+				width: 15%;
+				height: 70%;
+				float: left;
+				background: orange;
+			}
+			.footer {
+				width: 100%;
+				height: 10%;
+				clear: both;
+				background: plum;
+			}
+
+		</style>
+		<script></script>
+	</head>
+
+	<body>
+		<!-- 문서의 본문 텍스트, 이미지, 테이블, 자바스크립트 코드, 동영상 등 -->
+		<header class="header">
+			<h1><a href=""> HMxx's Homepage </a></h1>
+		</header>
+
+		<nav class="nav">
+			<ul>
+				<li>
+					<h2>About hmxx</h2>
+					<ul>
+						<li>
+							<a href="hmxx_who.html" target="myframe">Who is hmxx?</a>
+						</li>
+						<li>
+							<a href="hmxx_life.html" target="myframe">hmxx's daily life</a></li>
+					</ul>
+				</li>
+				<li>
+					<h2>My favorites</h2>
+					<ul>
+						<li>
+							<a href="" target="myframe">Best music 3</a>
+						</li>
+						<li>
+							<a href="">Best movie 3</a>
+						</li>
+						<li>
+							<a href="">Best nation 3 to travel</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<h2>hmxx form</h2>
+					<ul>
+						<li>
+							<a href="hmxx_circle.html" target="myframe">동호회 모집 안내</a>
+						</li>
+						<li>
+							<a href="hmxx_iot.html" target="myframe">온도관리 (IoT)</a>
+						</li>													
+					</ul>
+				</li>
+                <li>
+					<h2>hmxx invitation</h2>
+					<ul>
+						<li>
+							<a href="hmxx_xmas.html" target="myframe">X-Mas card</a>
+						</li>
+						<li>
+							<a href="hmxx_invitation.html" target="myframe">X-Mas 파티 초대장</a>
+						</li>													
+					</ul>
+				</li>
+			</ul>
+		</nav>
+
+		<section class="section" id="main">
+
+			<article>
+				<iframe src="hmxx_who.html" name="myframe" width="800" height="620">
+
+				</iframe>
+
+			</article>
+
+		</section>
+
+		<footer class="footer">
+			<p>
+				Copyright 2019, COMSI by hmxx
+			</p>
+		</footer>
+
+	</body>
+
+</html>
+

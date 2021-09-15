@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!-- 이 부분은 주석문입니다. 웹 브라우저는 주석을 화면에 출력하지 않습니다. -->
+<html>
+	<head>
+		<!-- 문서제목, 자바스크립트 코드, CSS 스타일 정의, 메타데이터정의 -->
+		<meta charset="utf-8">
+		<title>X-Mas card</title>
+		<style>
+			div {
+				display: inline-block;
+				position: absolute; /* 절대 배치 */
+                border: 50px solid transparent;
+                width: 550px;
+                height: 500px;
+				border-image: url(media/C__PowDCafe_25.png) 30 round;
+			}
+			div > p {
+				display: inline-block; /* div의 자식 p */
+				position: absolute; /* 절대 배치 */
+				height: 40px;
+				width: 30px;
+                font-size: 30px;
+            }
+            #hm03 {
+                display: inline-block;
+                position : absolute;
+                top : 410px;
+                left : 350px;
+                width : 175px;
+                padding : 5px;
+                color : black;
+            }
+            #tree1 {
+                position: absolute;
+                height: 100px;
+                width: 100px;
+                left: 70px;
+                top: 280px;
+            }
+            #tree2 {
+                position: absolute;
+                height: 100px;
+                width: 100px;
+                left: 130px;
+                top: 150px;
+            }
+            #tree3 {
+                position: absolute;
+                height: 100px;
+                width: 100px;
+                left: 300px;
+                top: 250px;
+            }
+            @keyframes bomb {
+                from {font-size: 200%;}
+                to {font-size: 100%;}
+            }
+            h3 {
+                animation-name: bomb;
+                animation-duration: 3s;
+                animation-iteration-count: infinite;
+                position: absolute;
+                left: 20px;
+                top: 600px;
+            }
+		</style>
+		<script></script>
+	</head>
+
+	<body>
+		<!-- 문서의 본문 텍스트, 이미지, 테이블, 자바스크립트 코드, 동영상 등 -->
+		
+		<div>
+			<img src="media/christmastree.png"
+			width="490px" height="450px" alt="크리스마스 트리">
+            <img id="tree1" src="media/my_christmas_004_anwansoon.png" alt="트리">
+            <img id="tree2" src="media/%EC%96%91%EB%A7%90.png" alt="양말">
+            <img id="tree3" src="media/christmas-snowman-icon_su3989.png" alt="눈사람">
+			<p style="left: 190px; top: 40px; background: aqua; color: red">
+				M
+			</p>
+			<p style="left: 220px; top: 70px; background: green; color: yellow;">
+				E
+			</p>
+			<p style="left: 250px; top: 100px; background: green; color: yellow;">
+				R
+			</p>
+			<p style="left: 280px; top: 130px; background: chartreuse; color: cornflowerblue">
+				R
+			</p>
+			<p style="left: 250px; top: 160px; background: yellow; color: firebrick">
+				Y
+			</p>
+            <p style="Left: 220px; top: 190px; background: white;">
+                X
+            </p>
+            <p style="Left: 190px; top: 220px; background: purple; color: white;">
+                -
+            </p>
+            <p style="Left: 160px; top: 250px; background: red; color: white;">
+                M
+            </p>
+            <p style="Left: 190px; top: 280px; background: skyblue;">
+                A
+            </p>
+            <p style="Left: 220px; top: 310px; background: yellow;">
+                S
+            </p>
+            <p id="hm03">hmxx,홍길동</p>
+            <audio src="media/happy%20town.mp3" controls autoplay loop></audio>
+		</div>
+        
+<!--        <h3>Merry Christmas!</h3>-->
+		
+	</body>
+
+</html>
+

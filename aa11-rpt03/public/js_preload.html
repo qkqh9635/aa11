@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!-- 이 부분은 주석문입니다. 웹 브라우저는 주석을 화면에 출력하지 않습니다. -->
+<html>
+  <head>
+    <!-- 문서제목, 자바스크립트 코드, CSS 스타일 정의, 메타데이터정의 -->
+    <meta charset="utf-8" />
+    <title>hmnn : Javascript Event</title>
+    <style></style>
+    <script>
+      // 미리 로딩해둘 이미지 이름 배열
+      var files = [
+        "media/Penguins.png",
+        "media/Lighthouse.png",
+        "media/Chrysanthemum.png",
+        "media/Desert.png",
+        "media/Hydrangeas.png",
+        "media/Jellyfish.png",
+        "media/Koala.png",
+        "media/Tulips.png",
+      ];
+      var imgs = new Array();
+      for (var i = 0; i < files.length; i++) {
+        imgs[i] = new Image(); // 메모리에 이미지 객체 생성
+        imgs[i].src = files[i]; // 이미지 로딩
+      }
+
+      // 다음 이미지 출력
+      var next = 1;
+      function change(img) {
+        img.src = imgs[next].src; // 이미지 변경
+        next++; // 다음 이미지
+        next %= imgs.length; // 개수를 넘으면 처음으로
+      }
+    </script>
+  </head>
+
+  <body>
+    <!-- 문서의 본문 텍스트, 이미지, 테이블, 자바스크립트 코드, 동영상 등 -->
+    <h3>이미지 프리로딩과 정보 출력</h3>
+    <hr />
+    이미지를 클릭하면 다음 이미지와 정보를 보여줍니다.
+    <p>
+      <img
+        style="border: 20px ridge wheat;"
+        src="media/Penguins.png"
+        alt="."
+        width="250"
+        height="250"
+        onclick="change(this)"
+      />
+    </p>
+  </body>
+</html>
