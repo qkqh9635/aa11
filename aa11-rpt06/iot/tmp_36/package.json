@@ -1,0 +1,20 @@
+{
+  "name": "tmp_36",
+  "version": "1.0.0",
+  "description": "tmp36-node project",
+  "main": "tmp36_node.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "tmp36",
+    "node",
+    "arduino"
+  ],
+  "author": "aa11",
+  "license": "MIT",
+  "dependencies": {
+    "serialport": "^9.2.4",
+    "socket.io": "^2.3.0"
+  }
+}
